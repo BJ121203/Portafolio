@@ -309,14 +309,15 @@
 
     <!-- 1) Carga PDF.js v4 (ESM) desde archivos locales .mjs -->
     <script type="module">
-        import * as pdfjs from './scripts/pdfjs/pdf.mjs';
+        import * as pdfjs from 'scripts/pdfjs/pdf.mjs';
         // Exponerlo como global para el resto de scripts
         window.pdfjsLib = pdfjs;
         // Worker ESM local
-        window.pdfjsLib.GlobalWorkerOptions.workerSrc = './scripts/pdfjs/pdf.worker.mjs';
+        window.pdfjsLib.GlobalWorkerOptions.workerSrc = 'scripts/pdfjs/pdf.worker.mjs';
     </script>
 
     <script src="scripts/pdfView.js"></script>
 </body>
+
 
 </html>
